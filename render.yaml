@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: pitchiq-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start.sh
+    autoDeployTrigger: "off"
+    healthCheckPath: /api/v2/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.8
+      - key: PITCHIQ_ENV
+        value: production
+      - key: PITCHIQ_DATABASE_PATH
+        value: /var/data/pitchiq_v2.sqlite3
+      - key: PITCHIQ_CORS_ORIGINS
+        sync: false
+    disk:
+      name: pitchiq-sqlite
+      mountPath: /var/data
+      sizeGB: 1

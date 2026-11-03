@@ -1,0 +1,45 @@
+{
+  "name": "pitchiq-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run --environment jsdom",
+    "capture:ui": "node scripts/capture-ui.mjs",
+    "validate:football": "node scripts/validate-football.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/inter-tight": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@types/three": "latest",
+    "@vitejs/plugin-react": "latest",
+    "clsx": "latest",
+    "framer-motion": "latest",
+    "gsap": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "recharts": "latest",
+    "three": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "latest",
+    "jsdom": "latest",
+    "playwright": "^1.64.1",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.17",
+    "vitest": "latest"
+  }
+}

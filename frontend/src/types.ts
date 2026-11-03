@@ -1,0 +1,11 @@
+export type Overview = { players: number; records: number; teams: number; competitions: number; goals: number; assists: number; minutes: number; shots: number; avg_age: number | null; season: string; methodology?: string };
+export type Player = { Rk: number; Player: string; Nation?: string | null; Pos: string; Squad: string; Comp: string; Age: number | null; MP?: number | null; Starts?: number | null; Min: number | null; Gls: number | null; Ast: number | null; 'G+A'?: number | null; Sh: number | null; SoT: number | null; 'SoT%': number | null; shot_accuracy: number | null; goals_per90: number | null; assists_per90: number | null; contributions_per90: number | null; TklW?: number | null; Int?: number | null; Crs?: number | null };
+export type PlayerPage = { total: number; items: Player[] };
+export type PlayerOption = Pick<Player, 'Rk' | 'Player' | 'Squad' | 'Pos' | 'Comp'>;
+export type Team = { team: string; players: number; goals: number; assists: number; shots: number; minutes: number; matches: number; goal_contributions: number; methodology?: string };
+export type Filters = { squads: string[]; competitions: string[]; positions: string[] };
+export type PositionSummary = { primary_position: string; players: number; goals: number; assists: number; avg_minutes: number; avg_goals: number; methodology?: string };
+export type Quality = { rows: number; columns: number; missing_cells: number; duplicate_rows: number; duplicate_rk: number; missing_names: number; missing_squads: number; missing_by_column: Record<string, number>; zero_minute_records: number; dataset: string };
+export type Correlation = { labels: string[]; matrix: (number | null)[][]; method: string; note: string };
+export type CompetitionAnalysis = { methodology: string; competitions: Array<{ Comp: string; player_records: number; players: number; goals: number; assists: number; avg_minutes: number }>; positions: Array<{ Comp: string; position: string; records: number }>; top_scorers: Player[] };
+export type Leaderboard = { metric: string; minimum_minutes: number; methodology: string; items: Player[] };

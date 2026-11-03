@@ -1,0 +1,13 @@
+# Covered here as well for standalone backend repository use.
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local application state; regenerate from the tracked CSV sources.
+data/**/*.db
+data/**/*.sqlite*
+data/import-reports/

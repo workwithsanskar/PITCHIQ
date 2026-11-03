@@ -1,0 +1,8 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30
+pandas>=2.2
+numpy>=2.0
+matplotlib>=3.10,<4
+seaborn>=0.13,<1
+pytest>=8.0
+httpx2>=0.1

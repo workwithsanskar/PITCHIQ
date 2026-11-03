@@ -1,0 +1,53 @@
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+id_ecdsa
+
+# Python environments, bytecode, and test/build caches
+.venv/
+venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Frontend dependencies and generated builds
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Generated local validation output and app exports
+/frontend/ui-validation/
+/pitchiq_v2_*.csv
+/package-lock.json
+
+# Local SQLite databases are reconstructed from the tracked source CSV files.
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-*
+/backend/data/import-reports/
+
+# Editor, OS, notebook, and temporary files
+.DS_Store
+Thumbs.db
+.idea/
+.ipynb_checkpoints/
+*.log
+*.textClipping
